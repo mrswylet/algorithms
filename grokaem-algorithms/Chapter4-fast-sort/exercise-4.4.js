@@ -5,10 +5,11 @@ console.log(maxSquare(width, height));
 
 
 /**
- *
- * @param width
- * @param height
- * @return {*}
+ * Функция делит переданный прямоугольник на максимальные
+ * по величине одинаковые квадраты, используя алгоритм Евклида
+ * @param width {number} - ширена прямоугольника
+ * @param height {number} - высота прямоугольника
+ * @return {number} - размер стороны получившегося квадрата
  */
 function maxSquare(width, height) {
 	// определяем, что больше, width or height
