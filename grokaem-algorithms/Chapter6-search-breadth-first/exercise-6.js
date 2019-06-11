@@ -1,113 +1,84 @@
-const graph = {
-	'you':		['bob', 'claire', 'alice'],
-	'alice':	['you', 'reggy'],
-	'bob':		['you', 'reggy', 'anuj'],
-	'claire':	['you', 'thom', 'jonny'],
-	'thom':		['claire', 'afa'],
-	'jonny':	['claire'],
-	'reggy':	['bob', 'alice'],
-	'anuj':		['bob'],
+const graph1 = {
+	'you': ['bob', 'claire', 'alice'],
+	'alice': ['reggy'],
+	'bob': ['reggy', 'anuj'],
+	'claire': ['thom', 'jonny'],
+	'thom': [],
+	'jonny': [],
+	'reggy': [],
+	'anuj': [],
+};
+const graph2 = {
+	'you': ['bob', 'claire', 'alice'],
+	'alice': ['you', 'reggy'],
+	'bob': ['you', 'reggy', 'anuj'],
+	'claire': ['you', 'thom', 'jonny'],
+	'thom': ['claire', 'afa'],
+	'jonny': ['claire'],
+	'reggy': ['bob', 'alice'],
+	'anuj': ['bob'],
 };
 
-console.log(searchBreadthFirst(graph, 'you', 'afa'));
+const target_item = 'bob';
+
+console.log(searchBreadthFirst(graph2, 'you', target_item));
 
 
 /**
- *
- * @param graph {object} -
- * @param to {string} -
- * @param from {string} -
+ * Функция для поиска в ширену по узаканному граффу
+ * @param graph {object} - граф, в котором производится поиск
+ * @param start {string} - позиция, с которой нужно начать искать
+ * @param target_item {string} - искомый узел
  */
-function searchBreadthFirst(graph, to, from) {
-	// очередь для поиска
+function searchBreadthFirst(graph, start, target_item) {
+
 	let queue = [];
-	// количество сделанных шагов
-	let step = 0;
-	// Сюда мы помещаем уже проверенные элементы, что бы не проверять их снова
-	let searched_node = {};
-	// количество связей на текущем уровне
-	let current_count_edge = 0;
-	// количество связей, на следующем уровне
-	let next_count_edge = 0;
+	let searched = {};
 
-	// занносим в очередь первый уровень
-	// получаем количество ребер на первом уровне
-	// обходим перевый уровень
-	// если встречаются дальнейшие связи, добавляем их в очередь
-	// пополняем количество узлов на следующем уровне
-	// когда счетчит узлов на текущем уровне обнулится
-		// увеличиваем счетчик шагов
-		// вереходим на следующий уровень
-
-	// первичное заполнение очереди
-	addQueue(graph[to]);
-
-	// заносим первый узел список проверенных элементов
-	searched_node[to] = true;
-
-	// перебираем очередь в поиске нужного узла
-	while(queue.length !== 0){
-		let node = queue.shift();
-
-		// заносим узел в список проверенных элементов
-		searched_node[node] = true;
-
-		// Уменьшаем количество связей на текущем уровне,
-		// т.к. узел извлечем из очереди для проверки
-		current_count_edge--;
-		// если количество связей на уровне уменьшилось до 0,
-		// значит проверенны все узлы на текущем уровне.
-		// увеличеваем количество сделанных шагов для поиска по графу
-		if(current_count_edge === 0){
-			step++;
-			current_count_edge = next_count_edge;
+	// добавляем стартовую позиции в очередь
+	if (Array.isArray(graph[start])) {
+		for (let value of graph[start]) {
+			queue.push(value);
 		}
-
-		if(node === from){
-			step++;
-			return {
-				step: step,
-				map: `Нашли - ${node}`,
-			};
+	} else {
+		console.error(`Позиция с которой нужно начать поиск: ${start} - не является массивом`);
+		return;
+	}
+	debugger
+	// переберает очередь
+	while (queue.length !== 0) {
+		// извлекаем позицию из очереди
+		let check_item = queue.shift();
+		// проверяем, не проверялась ли уже позиция
+		if (searched[check_item] !== undefined) {
+			continue;
+		}
+		// проверяем позицию на искомую
+		if (_isTargetItem(check_item)) {
+			// 	если да, завершаем поиск, выводим наеденный результат
+			return check_item;
 		} else {
-			if(graph[node] !== undefined) {
-				addQueue(graph[node])
+			// если нет,
+			// добавляем позицию в список проверенных
+			searched[check_item] = true;
+			// добавляем подпозиции в очередь
+			let is_check_item_array = Array.isArray(graph[check_item]);
+			if (is_check_item_array && graph[check_item].length !== 0) {
+				for (let value of graph[check_item]) {
+					queue.push(value);
+				}
 			}
 		}
 	}
+	return false;
+}
 
-	return {
-		step: step,
-		map: 'Не нашли ни чего'
-	};
-
-	/**
-	 * Функция добавляет все связные узлы от текущего узла в общую очередь
-	 * @param current_level {array} -
-	 */
-	function addQueue(current_level) {
-			let current_level_length = current_level.length;
-
-			if(current_level_length !== 0){
-
-				// проверяем количество не проверенных связей на текущем уровне
-				if(current_count_edge === 0){
-					// если связей нет,
-					current_count_edge = current_level_length;
-				} else {
-					next_count_edge += current_level_length;
-				}
-
-				for(let i = 0; i < current_level.length; i++){
-					let next_node = current_level[i];
-
-					if(searched_node[next_node] === true){
-						continue;
-					}
-					queue.push(next_node)
-				}
-			}
-
-
-	}
+/**
+ * Функция проверки, является ли переданный узел графа искомым
+ * @param item {string} - переданный узел графа
+ * @return {boolean}
+ * @private
+ */
+function _isTargetItem(item) {
+	return item === target_item;
 }
