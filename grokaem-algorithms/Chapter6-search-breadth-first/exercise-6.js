@@ -44,7 +44,7 @@ function searchBreadthFirst(graph, start, target_item) {
 		console.error(`Позиция с которой нужно начать поиск: ${start} - не является массивом`);
 		return;
 	}
-	debugger
+
 	// переберает очередь
 	while (queue.length !== 0) {
 		// извлекаем позицию из очереди
