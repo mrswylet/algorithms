@@ -1,0 +1,820 @@
+
+
+2019-07-01 10:58:38 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36
+    [location] => https://ekb.zenmod.ru/liquid/sale_liquid/?page=3&amp;order=ASC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => ASC
+    [sort] => p.price
+    [page] => 3
+    [category_id] => 132
+    [route] => product/category
+    [path] => 64_132
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-01 17:36:07 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 4.4.2; GT-I9505) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.101 Mobile Safari/537.36
+    [location] => https://ekb.zenmod.ru/search?order=ASC&amp;sort=p.price&amp;search=%D0%A2%D0%B0%D0%B1%D0%B0%D0%BA&amp;instock=true&amp;description=true&amp;c2c=false&amp;museum=false&amp;category_id=64&amp;page=3
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [search] => Табак
+    [category_id] => 64
+    [sub_category] => true
+    [instock] => true
+    [description] => true
+    [c2c] => false
+    [museum] => false
+    [order] => ASC
+    [sort] => p.price
+    [page] => 3
+    [route] => product/search
+    [path] => 
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-01 17:36:32 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 4.4.2; GT-I9505) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.101 Mobile Safari/537.36
+    [location] => https://ekb.zenmod.ru/search?order=ASC&amp;sort=p.price&amp;search=%D0%A2%D0%B0%D0%B1%D0%B0%D0%BA&amp;instock=true&amp;description=true&amp;c2c=false&amp;museum=false&amp;category_id=64&amp;page=3
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [search] => Табак
+    [category_id] => 64
+    [sub_category] => true
+    [instock] => true
+    [description] => true
+    [c2c] => false
+    [museum] => false
+    [order] => ASC
+    [sort] => p.price
+    [page] => 3
+    [route] => product/search
+    [path] => 
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-01 17:37:24 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 4.4.2; GT-I9505) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.101 Mobile Safari/537.36
+    [location] => https://ekb.zenmod.ru/search?order=ASC&amp;sort=p.price&amp;search=%D0%A2%D0%B0%D0%B1%D0%B0%D0%BA&amp;instock=true&amp;description=true&amp;c2c=false&amp;museum=false&amp;category_id=64&amp;page=3
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [search] => Табак
+    [category_id] => 64
+    [sub_category] => true
+    [instock] => true
+    [description] => true
+    [c2c] => false
+    [museum] => false
+    [order] => ASC
+    [sort] => p.price
+    [page] => 3
+    [route] => product/search
+    [path] => 
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-01 17:37:46 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 4.4.2; GT-I9505) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.101 Mobile Safari/537.36
+    [location] => https://ekb.zenmod.ru/search?order=ASC&amp;sort=p.price&amp;search=%D0%A2%D0%B0%D0%B1%D0%B0%D0%BA&amp;instock=true&amp;description=true&amp;c2c=false&amp;museum=false&amp;category_id=64&amp;page=3
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [search] => Табак
+    [category_id] => 64
+    [sub_category] => true
+    [instock] => true
+    [description] => true
+    [c2c] => false
+    [museum] => false
+    [order] => ASC
+    [sort] => p.price
+    [page] => 3
+    [route] => product/search
+    [path] => 
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-01 17:38:26 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 4.4.2; GT-I9505) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.101 Mobile Safari/537.36
+    [location] => https://ekb.zenmod.ru/search?order=ASC&amp;sort=p.price&amp;search=%D0%A2%D0%B0%D0%B1%D0%B0%D0%BA&amp;instock=true&amp;description=true&amp;c2c=false&amp;museum=false&amp;category_id=64&amp;page=3
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [search] => Табак
+    [category_id] => 64
+    [sub_category] => true
+    [instock] => true
+    [description] => true
+    [c2c] => false
+    [museum] => false
+    [order] => ASC
+    [sort] => p.price
+    [page] => 3
+    [route] => product/search
+    [path] => 
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-07 6:19:09 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 9; JSN-L21) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.101 Mobile Safari/537.36
+    [location] => https://tmn.zenmod.ru/search?order=ASC&amp;sort=p.price&amp;search=Mtl&amp;instock=true&amp;description=true&amp;museum=false&amp;page=4&amp;category_id=0
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [search] => Mtl
+    [instock] => true
+    [description] => true
+    [museum] => false
+    [order] => ASC
+    [sort] => p.price
+    [page] => 4
+    [category_id] => 0
+    [route] => product/search
+    [path] => 
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-07 6:19:15 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 9; JSN-L21) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.101 Mobile Safari/537.36
+    [location] => https://tmn.zenmod.ru/search?order=ASC&amp;sort=p.price&amp;search=Mtl&amp;instock=true&amp;description=true&amp;museum=false&amp;page=4&amp;category_id=0
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [search] => Mtl
+    [instock] => true
+    [description] => true
+    [museum] => false
+    [order] => ASC
+    [sort] => p.price
+    [page] => 4
+    [category_id] => 0
+    [route] => product/search
+    [path] => 
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-09 13:16:49 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 YaBrowser/19.6.2.599 Yowser/2.5 Safari/537.36
+    [location] => https://ekb.zenmod.ru/ec/pod/?page=2&amp;order=ASC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => ASC
+    [sort] => p.price
+    [page] => 2
+    [category_id] => 1028
+    [route] => product/category
+    [path] => 61_1028
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-09 13:16:53 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 YaBrowser/19.6.2.599 Yowser/2.5 Safari/537.36
+    [location] => https://ekb.zenmod.ru/ec/pod/?page=2&amp;order=ASC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => ASC
+    [sort] => p.price
+    [page] => 2
+    [category_id] => 1028
+    [route] => product/category
+    [path] => 61_1028
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-11 19:10:36 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36 OPR/62.0.3331.43
+    [location] => https://zenmod.ru/serviced/serviced-tanks/?page=4&amp;order=DESC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => DESC
+    [sort] => p.price
+    [page] => 4
+    [category_id] => 94
+    [route] => product/category
+    [path] => 91_94
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-11 19:10:42 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36 OPR/62.0.3331.43
+    [location] => https://zenmod.ru/serviced/serviced-tanks/?page=4&amp;order=DESC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => DESC
+    [sort] => p.price
+    [page] => 4
+    [category_id] => 94
+    [route] => product/category
+    [path] => 91_94
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-18 6:14:21 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 7.0; Shoot_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.101 Mobile Safari/537.36
+    [location] => https://tmn.zenmod.ru/serviced/drips/?page=3&amp;order=DESC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => DESC
+    [sort] => p.price
+    [page] => 3
+    [category_id] => 95
+    [route] => product/category
+    [path] => 91_95
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-20 19:49:20 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 9; ZB631KL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.101 Mobile Safari/537.36
+    [location] => https://kzn.zenmod.ru/ec/mods/?page=4&amp;order=ASC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => ASC
+    [sort] => p.price
+    [page] => 4
+    [category_id] => 87
+    [route] => product/category
+    [path] => 61_87
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-20 19:49:24 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 9; ZB631KL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.101 Mobile Safari/537.36
+    [location] => https://kzn.zenmod.ru/ec/mods/?page=4&amp;order=ASC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => ASC
+    [sort] => p.price
+    [page] => 4
+    [category_id] => 87
+    [route] => product/category
+    [path] => 61_87
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-20 19:49:25 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 9; ZB631KL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.101 Mobile Safari/537.36
+    [location] => https://kzn.zenmod.ru/ec/mods/?page=4&amp;order=ASC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => ASC
+    [sort] => p.price
+    [page] => 4
+    [category_id] => 87
+    [route] => product/category
+    [path] => 61_87
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-20 19:49:26 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 9; ZB631KL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.101 Mobile Safari/537.36
+    [location] => https://kzn.zenmod.ru/ec/mods/?page=4&amp;order=ASC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => ASC
+    [sort] => p.price
+    [page] => 4
+    [category_id] => 87
+    [route] => product/category
+    [path] => 61_87
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-20 19:49:27 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 9; ZB631KL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.101 Mobile Safari/537.36
+    [location] => https://kzn.zenmod.ru/ec/mods/?page=2&amp;order=ASC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => ASC
+    [sort] => p.price
+    [page] => 2
+    [category_id] => 87
+    [route] => product/category
+    [path] => 61_87
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-20 19:49:28 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 9; ZB631KL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.101 Mobile Safari/537.36
+    [location] => https://kzn.zenmod.ru/ec/mods/?page=2&amp;order=ASC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => ASC
+    [sort] => p.price
+    [page] => 2
+    [category_id] => 87
+    [route] => product/category
+    [path] => 61_87
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-20 19:49:35 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 9; ZB631KL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.101 Mobile Safari/537.36
+    [location] => https://kzn.zenmod.ru/ec/mods/?page=4&amp;order=ASC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => ASC
+    [sort] => p.price
+    [page] => 4
+    [category_id] => 87
+    [route] => product/category
+    [path] => 61_87
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-20 23:46:12 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 9; 16s) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36
+    [location] => https://kzn.zenmod.ru/liquid/saltnic_liquid/?page=4&amp;order=ASC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => ASC
+    [sort] => p.price
+    [page] => 4
+    [category_id] => 930
+    [route] => product/category
+    [path] => 64_930
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-20 23:46:18 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 9; 16s) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36
+    [location] => https://kzn.zenmod.ru/liquid/saltnic_liquid/?page=4&amp;order=ASC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => ASC
+    [sort] => p.price
+    [page] => 4
+    [category_id] => 930
+    [route] => product/category
+    [path] => 64_930
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-20 23:46:20 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 9; 16s) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36
+    [location] => https://kzn.zenmod.ru/liquid/saltnic_liquid/?page=4&amp;order=ASC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => ASC
+    [sort] => p.price
+    [page] => 4
+    [category_id] => 930
+    [route] => product/category
+    [path] => 64_930
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-28 11:10:55 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 9; Nokia 3.1 Plus) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36
+    [location] => https://ekb.zenmod.ru/liquid/sale_liquid/?page=4&amp;order=ASC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => ASC
+    [sort] => p.price
+    [page] => 4
+    [category_id] => 132
+    [route] => product/category
+    [path] => 64_132
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-28 11:11:31 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 9; Nokia 3.1 Plus) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36
+    [location] => https://ekb.zenmod.ru/liquid/sale_liquid/?page=4&amp;order=ASC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => ASC
+    [sort] => p.price
+    [page] => 4
+    [category_id] => 132
+    [route] => product/category
+    [path] => 64_132
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-30 12:55:10 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 7.1.2; Redmi Note 5A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36
+    [location] => https://chel.zenmod.ru/serviced/drips/?page=3&amp;order=DESC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => DESC
+    [sort] => p.price
+    [page] => 3
+    [category_id] => 95
+    [route] => product/category
+    [path] => 91_95
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-30 12:55:14 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 7.1.2; Redmi Note 5A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36
+    [location] => https://chel.zenmod.ru/serviced/drips/?page=3&amp;order=DESC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => DESC
+    [sort] => p.price
+    [page] => 3
+    [category_id] => 95
+    [route] => product/category
+    [path] => 91_95
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-30 12:55:19 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 7.1.2; Redmi Note 5A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36
+    [location] => https://chel.zenmod.ru/serviced/drips/?page=3&amp;order=DESC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => DESC
+    [sort] => p.price
+    [page] => 3
+    [category_id] => 95
+    [route] => product/category
+    [path] => 91_95
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-30 12:55:21 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 7.1.2; Redmi Note 5A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36
+    [location] => https://chel.zenmod.ru/serviced/drips/?page=3&amp;order=DESC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => DESC
+    [sort] => p.price
+    [page] => 3
+    [category_id] => 95
+    [route] => product/category
+    [path] => 91_95
+)
+
+errorDescription: builderProductCard: init build;
+
+2019-07-30 12:57:49 - app.errorHandler:
+xhr: Array
+(
+    [readyState] => 0
+)
+
+xhrStatus: -
+client: Array
+(
+    [agent] => Mozilla/5.0 (Linux; Android 7.1.2; Redmi Note 5A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36
+    [location] => https://chel.zenmod.ru/serviced/drips/?order=DESC&amp;sort=p.price
+)
+
+errorThrown: TypeError: Cannot read property 'length' of undefined
+dataThrown: Array
+(
+    [order] => DESC
+    [sort] => p.price
+    [page] => 1
+    [category_id] => 95
+    [route] => product/category
+    [path] => 91_95
+)
+
+errorDescription: builderProductCard: init build;
+
