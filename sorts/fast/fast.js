@@ -73,12 +73,14 @@ async function quickSort(elements) {
 
 			if (check_height < support_height) {
 				below_arr.push(check_el);
+				check_el.style.backgroundColor = '#92ec6b';
 			}
 		}
 
 		// показываем на экране все элементы массива, которые меньше опорного
 		for(let el of below_arr){
 			support_el.before(el);
+			el.style.backgroundColor = '';
 		}
 
 		return quickSort(below_arr);
