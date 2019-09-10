@@ -3,6 +3,7 @@ const list = document.querySelector('.list');
 const width = list.clientWidth;
 const height = list.clientHeight;
 
+let json = [845, 850, 806, 148, 172, 304, 287];
 
 for (let i = 0; i < width; i++) {
 	const h_item = randomInteger(1, height);
@@ -12,6 +13,14 @@ for (let i = 0; i < width; i++) {
 	list.append(div)
 }
 
+/*
+for (let h_item of json){
+	const div = document.createElement('div');
+	div.style.height = `${h_item}px`;
+	div.classList.add('item');
+	list.append(div)
+}
+*/
 
 function randomInteger(min, max) {
 	var rand = min - 0.5 + Math.random() * (max - min + 1);
@@ -42,9 +51,11 @@ async function quickSort(elements) {
 		})
 	}();
 
+
 	// получаем опорное число из середины массива
 	let index_half_elements = Math.floor(elements.length / 2);
-	let support_height = elements[index_half_elements].clientHeight;
+	let support_el = elements[index_half_elements];
+	let support_height = support_el.clientHeight;
 
 	// получаю все элементы массива, которые меньше опорного,
 	// рекурсивно отдаю их для сортировки
@@ -53,16 +64,26 @@ async function quickSort(elements) {
 		for (let i = 0; i < elements.length; i++) {
 			// если индекс элемента равен индексу опорного элемента,
 			// пропускаем его, он будет учтен в дальнейшем
-			if (i === index_half_elements) {
+
+			let check_el = elements[i];
+			if (check_el === support_el) {
 				continue;
 			}
-			if (elements[i].clientHeight < support_height) {
-				elements[index_half_elements].before(elements[i]);
-				below_arr.push(elements[i]);
+			let check_height = check_el.clientHeight;
+
+			if (check_height < support_height) {
+				below_arr.push(check_el);
 			}
 		}
+
+		// показываем на экране все элементы массива, которые меньше опорного
+		for(let el of below_arr){
+			support_el.before(el);
+		}
+
 		return quickSort(below_arr);
 	}();
+
 
 	// получаю все элементы массива, которые больше или равны опорному,
 	// рекурсивно отдаю из для сортировки
@@ -71,23 +92,23 @@ async function quickSort(elements) {
 		for (let i = 0; i < elements.length; i++) {
 			// если индекс элемента равен индексу опорного элемента,
 			// пропускаем его, он будет учтен в дальнейшем
-			if (i === index_half_elements) {
+			let check_el = elements[i];
+			if (check_el === support_el) {
 				continue;
 			}
-			if (elements[i].clientHeight >= support_height) {
-				elements[index_half_elements].after(elements[i]);
-				big_arr.push(elements[i]);
+			let check_height = check_el.clientHeight;
+
+			if (check_height >= support_height) {
+				big_arr.push(check_el);
 			}
+		}
+
+		// показываем на экране все элементы массива, которые больше или равны опорному
+		for(let el of big_arr){
+			support_el.after(el);
 		}
 		return quickSort(big_arr);
 	}();
 
-	/*if(big.length){
-		elements[index_half_elements].after(big[0]);
-	}
-	if(below.length){
-		elements[index_half_elements].before(below[0]);
-	}*/
-
-	return below.concat(elements[index_half_elements], big);
+	return below.concat(support_el, big);
 }
