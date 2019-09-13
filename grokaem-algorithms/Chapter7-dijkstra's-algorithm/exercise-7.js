@@ -1,7 +1,7 @@
 const graph1 = {
 	'a': {
 		'b': 30,
-		'c': 9,
+		'c': 7,
 		'd': 7
 	},
 	'b': {
@@ -47,82 +47,84 @@ console.log(searchDijkstraAlgorithm(graph1, star_point, finish_point));
 function searchDijkstraAlgorithm(graph, star_point, finish_point) {
 
 	// таблица стоймости узлов
-	let costs = {};
+	let costs_nodes = {};
 	// таблица родителей узлов
-	let parents = {};
+	let parents_nodes = {};
 	// список обработанных узлов
-	let processed = {};
+	let processed_nods = {};
 
-	// вносим в таблицу стоймости узлов первый стартовый узел
+	// проверяем присудствие в граффе стартового узла
 	const list_new_node = graph[star_point];
 	if(!list_new_node){
 		return {
 			status: 'error',
-			message: 'Стартовая позиция отсутствует в переданном графе'
+			message: 'Graph has not start point'
 		}
 	}
-	addNode(costs, star_point, graph, parents);
+
+	// вносим в таблицу стоймости узлов первый стартовый узел
+	addNode({costs_nodes, parents_nodes, current_node: star_point, graph});
 
 	// находим узел с наменьшей стоймостью среди необработанных
-	let current_node = getNode(costs, processed);
+	let current_node = getNodeLowest(costs_nodes, processed_nods);
 	// перебираем в цикле все не обработанные узлы
 	while (current_node) {
-		// добавляем в таблицу стоймости узлов соседние узлы
-		const list_new_node = graph[current_node];
-
 		// проверяем всех соседей текащего усла
 		// обновляем вес и родителя соседа, если это нужно
-		addNode(costs, current_node, graph, parents);
+		addNode({costs_nodes, current_node, graph, parents_nodes});
 
 		// помечаем узел как обработанный
-		processed[current_node] = true;
+		processed_nods[current_node] = true;
 
 		// обновляем узел с наименьшим весом  среди необработанных
-		current_node = getNode(costs, processed);
+		current_node = getNodeLowest(costs_nodes, processed_nods);
 	}
 
 	return {
-		costs,
-		parents,
-		processed
+		costs_nodes,
+		parents_nodes,
+		processed_nods
 	};
 }
 
 
 /**
- *
- * @param target_list {object} -
- * @param current_node {string} -
- * @param graph {object} -
- * @param parents {object} -
- * @returns {boolean}
+ * Function adds new nodes and a nodes' cost in the table "costs_node", or update nodes' cost if it need it
+ * @param object {object} - object with data, it is describe below.
+ * @param object.costs_nodes {object} - hash table with nodes' costs - {'node_name': cost}.
+ * @param object.parents_nodes {string} - hash table with nodes' parents - {'node': 'node_parent'}.
+ * @param object.graph {object} - the graph passed for search "finish point".
+ * @param object.current_node {object} - graph's node currently process.
+ * @returns {boolean} - return false if neighbors aren't be, else true
  */
-function addNode(target_list, current_node, graph, parents) {
-	const list_new_node = graph[current_node];
-	if (Object.keys(list_new_node).length === 0) {
+function addNode({costs_nodes, parents_nodes, current_node, graph}) {
+	const neighbors = graph[current_node];
+
+	// checking existence of neighbors
+	if (Object.keys(neighbors).length === 0) {
 		return false;
 	}
 
-	for (let new_node in list_new_node) {
-		if (!list_new_node.hasOwnProperty(new_node)) {
+	for (let neighbor_node in neighbors) {
+		if (!neighbors.hasOwnProperty(neighbor_node)) {
 			continue;
 		}
 
-		const pre_node_value = list_new_node[new_node];
+		debugger;
 
-		if (target_list[new_node]) {
-			const cost_node = target_list[new_node];
-			const cost_current_node = target_list[current_node];
-			const new_node_value = cost_current_node + pre_node_value;
+		const neighbor_node_value = neighbors[neighbor_node];
+		const cost_node_value = costs_nodes[neighbor_node];
+		let new_cost_node_value;
 
-			if(new_node_value < cost_node){
-				target_list[new_node] = new_node_value;
-				parents[new_node] = current_node
-			}
-		} else {
-			target_list[new_node] = pre_node_value;
-			parents[new_node] = current_node
+		const cost_current_node_value = costs_nodes[current_node];
+		const calculated_cost_node_value = cost_current_node_value + neighbor_node_value;
+
+		if (!cost_node_value || (calculated_cost_node_value < cost_node_value)) {
+			new_cost_node_value = cost_current_node_value + neighbor_node_value;
+			parents_nodes[neighbor_node] = current_node;
 		}
+
+		costs_nodes[neighbor_node] = new_cost_node_value || neighbor_node_value;
 	}
 
 	return true;
@@ -130,29 +132,29 @@ function addNode(target_list, current_node, graph, parents) {
 
 
 /**
- *
- * @param list_node
- * @param list_node_processed
+ * Function finds
+ * @param costs_nodes
+ * @param processed_nods
  * @returns {string}
  */
-function getNode(list_node, list_node_processed) {
+function getNodeLowest(costs_nodes, processed_nods) {
 	let lowest_value = Infinity;
 	let lowest_node;
 
-	for (let new_node in list_node) {
-		if (!list_node.hasOwnProperty(new_node)) {
+	for (let current_node in costs_nodes) {
+		if (!costs_nodes.hasOwnProperty(current_node)) {
 			continue;
 		}
 
-		if(list_node_processed[new_node] !== undefined){
+		if(processed_nods[current_node] !== undefined){
 			continue;
 		}
 
-		const new_node_value = list_node[new_node];
+		const new_node_value = costs_nodes[current_node];
 
 		if(new_node_value < lowest_value){
 			lowest_value = new_node_value;
-			lowest_node = new_node;
+			lowest_node = current_node;
 		}
 	}
 
