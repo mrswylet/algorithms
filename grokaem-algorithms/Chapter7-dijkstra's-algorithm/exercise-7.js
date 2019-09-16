@@ -1,14 +1,14 @@
 const graph1 = {
 	'a': {
 		'b': 30,
-		'c': 7,
+		'c': 9,
 		'd': 7
 	},
 	'b': {
 		'f': 1
 	},
 	'f': {
-		'v': 15
+		'v': 13
 	},
 	'c': {
 		'z': 13
@@ -112,19 +112,26 @@ function addNode({costs_nodes, parents_nodes, current_node, graph}) {
 
 		debugger;
 
+
+
 		const neighbor_node_value = neighbors[neighbor_node];
 		const cost_node_value = costs_nodes[neighbor_node];
-		let new_cost_node_value;
 
-		const cost_current_node_value = costs_nodes[current_node];
-		const calculated_cost_node_value = cost_current_node_value + neighbor_node_value;
+		if(!cost_node_value){
+			const cost_current_node_value = costs_nodes[current_node] || 0;
 
-		if (!cost_node_value || (calculated_cost_node_value < cost_node_value)) {
-			new_cost_node_value = cost_current_node_value + neighbor_node_value;
+			costs_nodes[neighbor_node] = cost_current_node_value + neighbor_node_value;
 			parents_nodes[neighbor_node] = current_node;
-		}
+		} else {
+			const cost_current_node_value = costs_nodes[current_node] || 0;
 
-		costs_nodes[neighbor_node] = new_cost_node_value || neighbor_node_value;
+			let new_cost_node_value = cost_current_node_value + neighbor_node_value;
+
+			if(new_cost_node_value < cost_node_value){
+				costs_nodes[neighbor_node] = new_cost_node_value;
+				parents_nodes[neighbor_node] = current_node;
+			}
+		}
 	}
 
 	return true;
