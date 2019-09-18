@@ -1,0 +1,22 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "Репозиторий для написанных мной алгоритмов",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest *.test.ru"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrswylet/algorithms.git"
+  },
+  "author": "permyakov.a.e@yandex.ru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrswylet/algorithms/issues"
+  },
+  "homepage": "https://github.com/mrswylet/algorithms#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}

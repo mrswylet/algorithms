@@ -162,3 +162,5 @@ function getNodeLowest(costs_nodes, processed_nods) {
 
 	return lowest_node;
 }
+
+module.exports = searchDijkstraAlgorithm;
