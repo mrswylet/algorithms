@@ -8,7 +8,7 @@ const graph1 = {
 		'f': 1
 	},
 	'f': {
-		'v': 13
+		'v': 15
 	},
 	'c': {
 		'z': 13
@@ -80,11 +80,17 @@ function searchDijkstraAlgorithm(graph, star_point, finish_point) {
 		current_node = getNodeLowest(costs_nodes, processed_nods);
 	}
 
-	return {
-		costs_nodes,
-		parents_nodes,
-		processed_nods
-	};
+	debugger
+	// search way from star_point to finish_point
+	let graph_way = [`${finish_point} (${costs_nodes[finish_point]})`];
+	let point_last_way = finish_point;
+	do {
+		point_last_way = parents_nodes[point_last_way];
+		let point_last_cost = costs_nodes[point_last_way];
+		graph_way.push(`${point_last_way} (${point_last_cost || 0})`);
+	} while (point_last_way !== star_point);
+
+	return graph_way.reverse().join(' --> ');
 }
 
 
@@ -110,27 +116,16 @@ function addNode({costs_nodes, parents_nodes, current_node, graph}) {
 			continue;
 		}
 
-		debugger;
-
-
-
 		const neighbor_node_value = neighbors[neighbor_node];
 		const cost_node_value = costs_nodes[neighbor_node];
 
-		if(!cost_node_value){
-			const cost_current_node_value = costs_nodes[current_node] || 0;
+		const cost_current_node_value = costs_nodes[current_node] || 0;
+		const new_cost_node_value = cost_current_node_value + neighbor_node_value;
 
-			costs_nodes[neighbor_node] = cost_current_node_value + neighbor_node_value;
+		// if node isn't exist, or it is exist, but node's new cost less node's current cost
+		if((!cost_node_value) || (new_cost_node_value < cost_node_value)){
+			costs_nodes[neighbor_node] = new_cost_node_value;
 			parents_nodes[neighbor_node] = current_node;
-		} else {
-			const cost_current_node_value = costs_nodes[current_node] || 0;
-
-			let new_cost_node_value = cost_current_node_value + neighbor_node_value;
-
-			if(new_cost_node_value < cost_node_value){
-				costs_nodes[neighbor_node] = new_cost_node_value;
-				parents_nodes[neighbor_node] = current_node;
-			}
 		}
 	}
 
@@ -166,15 +161,4 @@ function getNodeLowest(costs_nodes, processed_nods) {
 	}
 
 	return lowest_node;
-}
-
-
-/**
- * Функция проверки, является ли переданный узел графа искомым
- * @param item {string} - переданный узел графа
- * @return {boolean}
- * @private
- */
-function _isTargetItem(item) {
-	return item === target_item;
 }
